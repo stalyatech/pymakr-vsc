@@ -4,6 +4,6 @@
     # Target
     runtime     : electron 
     version     : 6.1.2
-    platform    : linux
+    platform    : win32
     arch        : x64
     abi         : 73
