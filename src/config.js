@@ -43,14 +43,14 @@ export default class Config {
             +  "- auto_connect            : true                : *Global settings only* If enabled, connects to USB automatically. Disable to use the 'address' field for connecting over WiFi\r\n"
             +  "Any of these can be used inside the Project config to override the global config\r\n"
             +  "\r\n"
-            +  "For more information, check github.com/pycom/pymakr-atom or docs.pycom.io\r\n"
+            +  "For more information, check github.com/pycom/pymakr-vsc or docs.pycom.io\r\n"
       ,
 
       start_text: "Welcome to the Pymakr plugin! Use the buttons on the left bottom to access all features and commands.\r\n"
               +  "This is how you get started:\r\n"
               +  " 1: Open 'Global Settings' (we went ahead and did that for you)\r\n"
-              +  " 2: Connect a pycom board to your USB and the terminal will auto-connect to it (you can skip step 3 and 4 now)\r\n"
-              +  " 3: If you want to connect over WiFi, disable auto_connect and fill in the correct IP or serial port of your Pycom board in 'address'\r\n"
+              +  " 2: Connect a Micropython board to your USB and the terminal will auto-connect to it (you can skip step 3 and 4 now)\r\n"
+              +  " 3: If you want to connect over WiFi, disable auto_connect and fill in the correct IP or serial port of your Micropython board in 'address'\r\n"
               +  "     (When using serial, you can also use the 'List serial ports' to find the correct serial port)\r\n"
               +  " 4: Connect using the 'Connect' command or the 'Pymakr Console' button\r\n"
               +  " 5: Open a micropython project with main.py and boot.py files\r\n"
@@ -134,7 +134,7 @@ export default class Config {
             type: 'boolean',
             default: true,
             title: 'Reboot after upload',
-            description: 'Reboots your pycom board after any upload or download action',
+            description: 'Reboots your board after any upload or download action',
             order: 11
         },
         fast_upload: {
@@ -156,12 +156,12 @@ export default class Config {
         },
         autoconnect_comport_manufacturers: {
             title: 'Autoconnect comport manufacturers',
-            description: 'Comma separated list of all the comport manufacturers supported for the autoconnect feature. Defaults to all possible manufacturers that pycom boards can return.',
+            description: 'Comma separated list of all the comport manufacturers supported for the autoconnect feature. Defaults to all possible manufacturers that boards can return.',
             type: 'array',
             items: {
               type: 'string'
             },
-            default: ['Pycom','Pycom Ltd.','FTDI','Microsoft','Microchip Technology, Inc.'],
+            default: ['stalya','Pycom','Pycom Ltd.','FTDI','Microsoft','Microchip Technology, Inc.'],
             order: 13
         },
     }

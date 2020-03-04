@@ -1,10 +1,9 @@
 #  Pymakr VSC Package
 
-Pymakr enables you to communicate to your Pycom board using the build in command line REPL. Run a single file to your board, sync your entire project or directly type and execute commands.
+Pymakr enables you to communicate to your Micropython board using the build in command line REPL. Run a single file to your board, sync your entire project or directly type and execute commands.
 
 - Works with macOS, Linux, and Windows.
-- Connects to any Pycom board: WiPy, WiPy 2.0, LoPy, and any newer board.
-- Works best with firmware `1.6.11.b1` and higher. Earlier firmware might have unexpected behaviour when synchronizing files over serial.
+- Connects to any Micropython board.
 
 More info and documentation can be found on [docs.pycom.io](https://docs.pycom.io)
 

@@ -238,7 +238,7 @@ export default class Pymakr extends EventEmitter {
       this.logger.info("Starting autoconnect interval...")
       this.stopAutoConnect()
       this.terminal.writeln("AutoConnect enabled, ignoring 'address' setting (see Global Settings)")
-      this.terminal.writeln("Searching for PyCom boards on serial...")
+      this.terminal.writeln("Searching for Micropython boards on serial...")
       if(!wait){
         this.setAutoconnectAddress(cb)
       }
@@ -271,11 +271,11 @@ export default class Pymakr extends EventEmitter {
     this.getAutoconnectAddress(function(address){
       _this.logger.silly("Found address: "+address)
       if(_this.autoconnect_address === undefined && !address){ // undefined means first time use
-        _this.terminal.writeln("No PyCom boards found on USB")
+        _this.terminal.writeln("No Micropython boards found on USB")
         failed = true
         // emitted_addr = _this.settings.address
       }else if(address && address != _this.autoconnect_address){
-        _this.logger.silly("Found a PyCom board on USB: "+address)
+        _this.logger.silly("Found a Micropython board on USB: "+address)
         emitted_addr = address
         _this.emit('auto_connect',address)
       }else if(_this.autoconnect_address && !address){
@@ -328,7 +328,7 @@ export default class Pymakr extends EventEmitter {
           }
         }else{
           cb(null)
-          _this.logger.silly("No Pycom boards found")
+          _this.logger.silly("No Micropython boards found")
         }
       })
     }else{

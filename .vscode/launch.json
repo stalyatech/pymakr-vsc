@@ -6,9 +6,9 @@
         "type": "node",
         "request": "launch",
         "name": "Electron-Test Index",
-        "runtimeExecutable": "C:\\develop\\pymakr-vsc\\test\\test-electron\\node_modules\\electron\\dist\\electron.exe",
+        "runtimeExecutable": "/home/tmk/embedded/pymakr-vsc/node_modules/electron/dist/electron",
         
-        "program": "C:\\develop\\pymakr-vsc\\test\\test-electron\\index.js"
+        "program": "/home/tmk/embedded/pymakr-vsc/test-electron/index.js"
     },
         {
             "name": "PowerShell Launch Current File w/Args Prompt",
